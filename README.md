@@ -106,6 +106,11 @@ cd backend && python generate_narration.py                # record every page (o
 
 Choose the voice with `NARRATION_VOICE` in `backend/.env`. Files and `manifest.json` go to `frontend/public/media/narration/` (MP3 with `lameenc`, otherwise WAV); rebuild the site afterwards. Visitors turn narration on with the 🔊 Narrate balloon; captions are shown, audio only starts after that click, and until recordings exist the browser's built-in voice is used.
 
+## Background music and résumé
+
+- **Music:** "Lay Low" by alisiabeats, from Pixabay (Pixabay Content License: free to use, no attribution required). File: `frontend/public/media/music/lay-low.mp3`, re-encoded at 112 kbps for the web. Settings in `frontend/src/book/music/music.ts`. It starts after the first click, fades under narration, stops during videos, and can be turned off with the ♪ Music balloon.
+- **Résumé:** `frontend/public/Muhammad_Zohair_Shaikh_Resume.pdf`, downloaded from the About page. It is public once deployed, including the phone number printed on it.
+
 ## The avatar
 
 The character is "Stylized anime character" by pinguinoconpulgares (Sketchfab, **CC BY 4.0**, credit shown inside the back cover). The original is in `assets/avatar/final/`; the web copy is `frontend/public/avatar/comic-character.glb` (textures re-encoded, geometry unchanged).

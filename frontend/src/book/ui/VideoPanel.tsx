@@ -1,3 +1,4 @@
+import { music } from '../music/music';
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import GameplayPanel from '../../components/GameplayPanel';
 import { usePage } from '../engine/PageContext';
@@ -54,6 +55,11 @@ function YouTubePanel({ id, title, poster, posterAlt, youtube, note, artOverlay 
   const watchUrl = `https://youtu.be/${youtube}`;
 
   const active = state === 'loading' || state === 'playing';
+  /** YouTube's own player state (1 playing, 3 buffering, 2 paused, 0 ended); null until it reports one. */
+  const [ytState, setYtState] = useState<number | null>(null);
+  // Background music is silent while the video plays and comes back when it is paused or finishes.
+  const silenceMusic = active && (ytState === null || ytState === 1 || ytState === 3);
+  useEffect(() => { music.duck(`yt-${id}`, silenceMusic); return () => music.duck(`yt-${id}`, false); }, [silenceMusic, id]);
   useEffect(() => {
     if (state !== 'loading') return;
     const t = setTimeout(() => setState((s) => (s === 'loading' ? 'playing' : s)), 6000); // never stay stuck on "Loading…"
@@ -68,6 +74,8 @@ function YouTubePanel({ id, title, poster, posterAlt, youtube, note, artOverlay 
       try { msg = JSON.parse(e.data); } catch { return; }
       if (msg.event === 'onError') { setErrorCode(Number(msg.info)); setState('error'); }
       const info = msg.info as { playerState?: number } | undefined;
+      if (msg.event === 'infoDelivery' && typeof info?.playerState === 'number') setYtState(info.playerState);
+      if (msg.event === 'onStateChange' && typeof msg.info === 'number') setYtState(msg.info);
       if (msg.event === 'infoDelivery' && info?.playerState === 1) setState((s) => (s === 'error' ? s : 'playing'));
       if (msg.event === 'onStateChange' && msg.info === 1) setState((s) => (s === 'error' ? s : 'playing'));
     };

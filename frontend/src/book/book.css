@@ -214,7 +214,7 @@
 @media (max-width: 700px) { .tab-menu { left: auto; right: 0; } }
 
 /* ============ Narration ============ */
-.balloon.narrate { font-size: 1rem; padding: 8px 20px; min-height: 42px; }
+.balloon.narrate { font-size: 1rem; padding: 8px 20px; min-height: 42px; display: inline-flex; align-items: center; gap: 6px; }
 .balloon.narrate.on { background: var(--caption); }
 .captions { position: absolute; left: 50%; bottom: 14px; transform: translateX(-50%); z-index: 6; width: min(760px, calc(100% - 32px));
   display: grid; grid-template-columns: auto 1fr auto; gap: 12px; align-items: center;
@@ -229,3 +229,17 @@
 .face-credits .credits-end .page-title h2 { font-size: 96px; }
 .face-credits .credits-end > .balloon { align-self: center; }
 .face-credits .fine-print { position: absolute; left: 50px; right: 50px; bottom: 30px; margin: 0; font-size: 15px; line-height: 1.4; opacity: .75; text-align: center; }
+
+/* ---- background music toggle (controls bar) ---- */
+.balloon.music { font-size: 1rem; padding: 8px 18px; min-height: 42px; display: inline-flex; align-items: center; gap: 6px; }
+.balloon.music.on { background: var(--caption); }
+
+/* ---- About: résumé download ---- */
+.face-about .resume-btn { position: absolute; top: 96px; right: 50px; display: inline-flex; align-items: baseline; gap: 8px; font-size: 24px; padding: 10px 24px; text-decoration: none; color: var(--ink); }
+.face-about .resume-btn small { font-size: 16px; opacity: .7; }
+
+/* phones: Narrate and Music shrink to their icons so the controls fit on one row */
+@media (max-width: 700px) {
+  .book-controls .balloon.narrate .lbl, .book-controls .balloon.music .lbl { display: none; }
+  .book-controls .balloon.narrate, .book-controls .balloon.music { padding: 8px 14px; font-size: 1.15rem; }
+}

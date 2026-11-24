@@ -116,6 +116,16 @@ const waitPath = async (p, want, ms = 30000) => { const t = Date.now(); while (D
   await p.getByRole('button', { name: /Stop narrating/ }).click();
   ok(await p.getByRole('button', { name: /Narrate/ }).getAttribute('aria-pressed') === 'false' && await p.locator('.captions').count() === 0, 'narration stops and captions disappear');
 
+  console.log('music & résumé');
+  const musicBtn = p.locator('.balloon.music');
+  const before = await musicBtn.getAttribute('aria-pressed');
+  await musicBtn.click(); await p.waitForTimeout(300);
+  ok(await musicBtn.getAttribute('aria-pressed') !== before, 'the Music balloon toggles background music');
+  await musicBtn.click();
+  const resume = await p.locator('.face-about .resume-btn').getAttribute('href');
+  const pdf = await p.request.get(base + resume);
+  ok(pdf.ok() && (pdf.headers()['content-type'] || '').includes('pdf'), 'About has a working résumé download (PDF)');
+
   console.log('every page fits');
   const over = await p.evaluate(() => [...document.querySelectorAll('.face-root .face')].filter((f) => {
     const kids = [...f.children].filter((c) => getComputedStyle(c).position !== 'absolute');

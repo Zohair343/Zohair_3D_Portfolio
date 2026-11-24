@@ -18,6 +18,7 @@ import { PointingArm, type PointTarget } from '../../avatar/PointingArm';
 import { NarratorAvatar } from '../../avatar/NarratorAvatar';
 import { NarrationPlayer } from '../narration/player';
 import { Captions } from '../narration/Captions';
+import { music } from '../music/music';
 import { avatarConfig } from '../../avatar/config';
 
 interface Slot { page: PageDef; outer: HTMLDivElement; inner: HTMLDivElement; obj: CSS3DObject; tex: THREE.CanvasTexture; blank: THREE.CanvasTexture; mat?: THREE.MeshStandardMaterial; side: 'left' | 'right'; invalidate: () => void }
@@ -284,6 +285,10 @@ export default function Book({ pages, tabs }: { pages: PageDef[]; tabs: TabDef[]
     void player.play(pagesToRead(target.current));
   };
   useEffect(() => () => player.stop(), [player]);
+
+  /* ---------- background music ---------- */
+  const [musicOn, setMusicOn] = useState(music.enabled);
+  useEffect(() => { const off = music.armAutostart(); const unsub = music.subscribe(() => setMusicOn(music.enabled)); return () => { off(); unsub(); }; }, []);
   const narratorAnchor = useCallback(() => {
     const [l] = spreadPages(spreadRef.current);
     const left = single ? (focus === 'left' && l) : !!l;
@@ -356,8 +361,12 @@ export default function Book({ pages, tabs }: { pages: PageDef[]; tabs: TabDef[]
       </div>
       <div className="book-controls">
         <button className="balloon balloon-tail-left" onClick={prev} disabled={spread === 0}>← Back</button>
-        <button className={`balloon narrate ${narrating ? 'on' : ''}`} onClick={toggleNarration} aria-pressed={narrating}>
-          {narrating ? '■ Stop narrating' : '🔊 Narrate'}
+        <button className={`balloon narrate ${narrating ? 'on' : ''}`} onClick={toggleNarration} aria-pressed={narrating} aria-label={narrating ? 'Stop narrating' : 'Narrate'}>
+          <span aria-hidden="true">{narrating ? '■' : '🔊'}</span><span className="lbl">{narrating ? 'Stop narrating' : 'Narrate'}</span>
+        </button>
+        <button className={`balloon music ${musicOn ? 'on' : ''}`} onClick={() => music.toggle()} aria-pressed={musicOn}
+          aria-label={musicOn ? 'Background music on. Turn it off' : 'Background music off. Turn it on'} title="Background music">
+          <span aria-hidden="true">♪</span><span className="lbl">{musicOn ? 'Music' : 'Music off'}</span>
         </button>
         <p className="book-hint">Click a page corner, swipe, or use ← →</p>
         <button className="balloon balloon-tail-right" onClick={next} disabled={spread === N && (!single || focus === 'right')}>Next page →</button>

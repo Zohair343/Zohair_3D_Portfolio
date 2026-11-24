@@ -34,6 +34,8 @@ Open http://127.0.0.1:5173. To use the chatbot too, also run `python app.py` in 
 | How much the narrator gestures | `frontend/src/avatar/talk.ts` | `T` at the top (`headNod`, `headTurn`, `armLift`, `forearm`) |
 | The avatar's pose | `frontend/src/avatar/config.ts` | `restPose` (radians per bone) |
 | The desk, lamp and props (positions, lamp brightness/colour) | `frontend/src/book/engine/desk.tsx` | `DESK` at the top (`lamp.base/elbow/head/target`, `lampIntensity`, `lampColor`); props are in `DeskProps` |
+| Background music (track, volume) | `frontend/src/book/music/music.ts` | `MUSIC` at the top: `src`, `volume` (normal), `underNarration`. The file is `frontend/public/media/music/lay-low.mp3` |
+| The résumé file | `frontend/public/Muhammad_Zohair_Shaikh_Resume.pdf` | Replace the file (same name). The button is in `pages/About.tsx` |
 | The avatar's size/position on the cover | `frontend/src/book/engine/Book.tsx` | `<CoverAvatar … scale position>` |
 
 ## Common requests, step by step
@@ -76,4 +78,5 @@ Open http://127.0.0.1:5173. To use the chatbot too, also run `python app.py` in 
 - **The pointing hand** is a second copy of the character standing just outside the book. Clipping planes hide everything except the arm (beyond the frame edge, and below the arm), and inverse kinematics (CCD: rotate shoulder, elbow and wrist in turn toward the target) brings the fingertip to the hovered button. It's drawn on its own transparent canvas above the page HTML so it is never hidden under page content. `src/avatar/PointingArm.tsx`, `src/avatar/ik.ts`.
 - **Narration.** Each page's line (`content/narration.json`) is recorded once with Gemini text-to-speech (`backend/generate_narration.py`) and played by `src/book/narration/player.ts`. The Web Audio API measures the voice's loudness every frame; `src/avatar/talk.ts` turns that into head nods and hand gestures. The model has no jaw, so the mouth doesn't move. Captions show the text. Until recordings exist, the browser's own voice is used.
 - **Ask Zohair** is retrieval-augmented generation: the question is embedded, matched against the portfolio's own text in a FAISS index, and the model must answer from those passages and cite them. A citation link turns the book to that panel.
+- **Background music** (`src/book/music/music.ts`) starts quietly on the visitor's first click (browsers block sound before that), fades down while the narrator speaks, stops while a project video plays and resumes when it is paused or ends. The ♪ Music balloon turns it off, and the choice is remembered.
 - **No 3D? Reading mode.** If WebGL is missing or crashes, the same pages show flat (`/read`).
