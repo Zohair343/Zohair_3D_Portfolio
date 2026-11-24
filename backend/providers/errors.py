@@ -1,0 +1,6 @@
+class ProviderUnavailable(Exception):
+    """An AI service could not produce a result. Never shown to visitors as an answer."""
+
+    def __init__(self, code: str, message: str, status: int = 503):
+        super().__init__(message)
+        self.code, self.message, self.status = code, message, status

@@ -1,0 +1,475 @@
+{
+  "$comment": "Single source of truth for public portfolio text. The frontend renders it; backend/ingest.py chunks it for the Ask Zohair index. Every panel 'id' becomes a URL anchor. Facts must come from the résumé or material Zohair approves. Do NOT add phone numbers, private emails or visitor messages here.",
+  "profile": {
+    "name": "Muhammad Zohair Shaikh",
+    "role": "Game Developer",
+    "location": "Karachi, Pakistan",
+    "intro": "I build games in Unreal Engine and Unity. Open a project to see how its combat, enemy AI, puzzles, or pathfinding works.",
+    "url": "/"
+  },
+  "about": {
+    "url": "/about",
+    "title": "Origin Story",
+    "panels": [
+      {
+        "id": "intro",
+        "title": "Who's holding the pen",
+        "caption": "Final year · NED University · Karachi",
+        "body": "I am a final-year Computer Science undergraduate at NED University, Karachi, specializing in game development. I build interactive systems in Unreal Engine 5 and Unity, and I also have experience building full-stack applications with React, Flask, and Node.js."
+      },
+      {
+        "id": "systems",
+        "title": "The systems I like to build",
+        "caption": "Combat · Enemy AI · Puzzles · Pathfinding",
+        "body": "My projects keep returning to the systems underneath play: a combo-driven melee system with a slow-motion reward in Scorched, NavMesh-driven enemies in Scorched and Darkness Within, riddles and inventory in Darkness Within, clue-driven point-and-click investigation in Last Dance, and Dijkstra's shortest path in my 2D maze game."
+      },
+      {
+        "id": "software",
+        "title": "Same discipline, different medium",
+        "caption": "OOP · DSA · Software engineering",
+        "body": "I am grounded in object-oriented programming, data structures and algorithms, and software engineering principles, and I am comfortable across both game and software development. The same habits show up in my games: modular Actor Components, event-driven UI with multicast delegates instead of polling, and a classic graph algorithm applied to a maze."
+      }
+    ]
+  },
+  "skills": {
+    "url": "/skills",
+    "title": "Inventory",
+    "groups": [
+      {
+        "id": "game-dev",
+        "title": "Game development & 3D",
+        "items": [
+          {
+            "name": "Unreal Engine 5",
+            "evidence": "/projects/scorched#arena"
+          },
+          {
+            "name": "Blueprint Visual Scripting",
+            "evidence": "/projects/scorched#blueprint"
+          },
+          {
+            "name": "UE5 Material Editor",
+            "evidence": "/projects/scorched#toon-shader"
+          },
+          {
+            "name": "Unity",
+            "evidence": "/projects/darkness-within#reveal"
+          },
+          {
+            "name": "C# scripting",
+            "evidence": "/projects/maze-pathfinding#dijkstra"
+          },
+          {
+            "name": "NavMesh",
+            "evidence": "/projects/darkness-within#threat"
+          },
+          {
+            "name": "Physics"
+          },
+          {
+            "name": "Animation state machines"
+          },
+          {
+            "name": "AR/VR"
+          },
+          {
+            "name": "Blender modeling"
+          }
+        ]
+      },
+      {
+        "id": "programming",
+        "title": "Programming",
+        "items": [
+          {
+            "name": "C"
+          },
+          {
+            "name": "C++"
+          },
+          {
+            "name": "C#",
+            "evidence": "/projects/maze-pathfinding#dijkstra"
+          },
+          {
+            "name": "Python"
+          },
+          {
+            "name": "JavaScript"
+          }
+        ]
+      },
+      {
+        "id": "software-dev",
+        "title": "Software development",
+        "items": [
+          {
+            "name": "OOP",
+            "evidence": "/projects/scorched#combo"
+          },
+          {
+            "name": "Data structures & algorithms",
+            "evidence": "/projects/maze-pathfinding#dijkstra"
+          },
+          {
+            "name": "REST APIs"
+          },
+          {
+            "name": "Software design",
+            "evidence": "/projects/scorched#hud"
+          },
+          {
+            "name": "Testing & debugging"
+          }
+        ]
+      },
+      {
+        "id": "web",
+        "title": "Web & databases",
+        "items": [
+          {
+            "name": "HTML"
+          },
+          {
+            "name": "CSS"
+          },
+          {
+            "name": "Tailwind CSS"
+          },
+          {
+            "name": "React.js"
+          },
+          {
+            "name": "Flask"
+          },
+          {
+            "name": "Node.js"
+          },
+          {
+            "name": "MySQL"
+          },
+          {
+            "name": "MongoDB"
+          }
+        ]
+      },
+      {
+        "id": "tools",
+        "title": "Tools",
+        "items": [
+          {
+            "name": "Git"
+          },
+          {
+            "name": "GitHub"
+          },
+          {
+            "name": "VS Code"
+          },
+          {
+            "name": "Postman"
+          },
+          {
+            "name": "Docker"
+          }
+        ]
+      }
+    ]
+  },
+  "projects": [
+    {
+      "slug": "scorched",
+      "title": "Scorched",
+      "genre": "First-Person Action Rogue-Like",
+      "engine": "Unreal Engine 5",
+      "accent": "#d9822b",
+      "accent2": "#c9a66b",
+      "coverLine": "Three hits. Then time slows down.",
+      "premise": "A first-person action rogue-like set in an ancient Egyptian environment, featuring combo-driven gameplay, two AI enemy archetypes, and a custom toon shader. Developed entirely in Blueprint Visual Scripting.",
+      "media": {
+        "poster": "/art/scorched-arena.svg",
+        "status": "final",
+        "note": "Gameplay from Scorched (YouTube).",
+        "youtube": "fdXOgMXlxmI"
+      },
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://youtu.be/fdXOgMXlxmI"
+        }
+      ],
+      "panels": [
+        {
+          "id": "arena",
+          "kind": "dominant",
+          "title": "The arena",
+          "caption": "Land three hits to unlock the slow-motion gun ability.",
+          "body": "Scorched is a first-person action rogue-like set in an ancient Egyptian environment, built in Unreal Engine 5. Combat is combo-driven: a melee streak of three connected hits unlocks a slow-motion gun ability."
+        },
+        {
+          "id": "toon-shader",
+          "kind": "support",
+          "title": "A custom toon shader",
+          "caption": "UE5 Material Editor",
+          "body": "Zohair authored a custom toon shader in Unreal Engine 5's Material Editor to give Scorched a distinct stylized visual identity."
+        },
+        {
+          "id": "blueprint",
+          "kind": "support",
+          "title": "Built entirely in Blueprints",
+          "caption": "Blueprint Visual Scripting",
+          "body": "Scorched was developed entirely with Blueprint Visual Scripting in Unreal Engine 5, including its combat, enemy AI, and HUD."
+        },
+        {
+          "id": "combo",
+          "kind": "action",
+          "title": "Hit one: the combo system",
+          "caption": "Modular Actor Components",
+          "body": "The melee combo system is modular and built from Actor Components. Packaging combat logic as components keeps it separate from any single character class, so the same behaviour can be attached to an actor rather than rewritten for it."
+        },
+        {
+          "id": "hit-detection",
+          "kind": "action",
+          "title": "Hit two: frame-accurate contact",
+          "caption": "Sphere-cast hit detection",
+          "body": "Melee hits are detected with frame-accurate sphere casts. A sphere cast sweeps a sphere along a path and reports what it touches, which suits a swinging melee attack better than a single line trace."
+        },
+        {
+          "id": "slow-motion",
+          "kind": "action",
+          "title": "Hit three: time slows",
+          "caption": "Three-hit streak → slow-motion gun",
+          "sfx": "KRAK!",
+          "body": "Hit detection chains into the combo streak. Landing three connected hits unlocks the slow-motion gun ability, so the ranged power is gated by a 3-hit melee streak."
+        },
+        {
+          "id": "enemies",
+          "kind": "paired",
+          "title": "Two enemies, one way of moving",
+          "caption": "Melee and ranged archetypes · NavMesh pursuit",
+          "body": "Scorched has two distinct AI enemy archetypes, melee and ranged. Each has independent behaviour logic, while both share a common locomotion architecture and pursue the player using NavMesh-driven navigation."
+        },
+        {
+          "id": "hud",
+          "kind": "detail",
+          "title": "A HUD that listens",
+          "caption": "Multicast delegates · no UI polling",
+          "body": "The HUD is fully event-driven. Health and ability state are broadcast through multicast delegates, and the HUD updates when those events fire, eliminating UI polling. A multicast delegate lets one event notify every bound listener."
+        }
+      ]
+    },
+    {
+      "slug": "darkness-within",
+      "title": "Darkness Within",
+      "genre": "First-Person Survival Horror",
+      "engine": "Unity",
+      "accent": "#7fa37a",
+      "accent2": "#3b4a3a",
+      "coverLine": "Solve it quietly. Something is listening.",
+      "premise": "A 3D first-person survival horror game built in Unity with riddles, inventory management, shooting mechanics, and AI-driven enemies using NavMesh. Animations, sound effects, and atmospheric music build the tension.",
+      "media": {
+        "poster": "/art/darkness-within.svg",
+        "status": "final",
+        "note": "Gameplay from Darkness Within (YouTube). Played without overlays so dark scenes stay visible.",
+        "youtube": "OCBVFGwkT9A"
+      },
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://youtu.be/OCBVFGwkT9A"
+        }
+      ],
+      "panels": [
+        {
+          "id": "reveal",
+          "kind": "dominant",
+          "title": "Something in the dark",
+          "caption": "First-person survival horror · Unity",
+          "body": "Darkness Within is a 3D first-person survival horror game built in Unity. The player works through riddles and inventory decisions while AI-driven enemies hunt them."
+        },
+        {
+          "id": "riddle",
+          "kind": "support",
+          "title": "A riddle on the wall",
+          "caption": "Riddles",
+          "body": "Darkness Within includes riddles for the player to solve, alongside its inventory, shooting, and enemy AI."
+        },
+        {
+          "id": "inventory",
+          "kind": "support",
+          "title": "What do you carry?",
+          "caption": "Inventory management",
+          "body": "Darkness Within includes inventory management."
+        },
+        {
+          "id": "threat",
+          "kind": "dominant",
+          "title": "It found you",
+          "caption": "NavMesh-driven enemy AI",
+          "sfx": "SKRRCH",
+          "body": "Enemies in Darkness Within are AI-driven and navigate with Unity's NavMesh, which lets them path through the level toward the player."
+        },
+        {
+          "id": "shooting",
+          "kind": "support",
+          "title": "Last resort",
+          "caption": "Shooting mechanics",
+          "body": "Darkness Within includes shooting mechanics alongside its puzzles."
+        },
+        {
+          "id": "atmosphere",
+          "kind": "detail",
+          "title": "Sound does the haunting",
+          "caption": "Animation · sound effects · atmospheric music",
+          "body": "Animations, sound effects, and atmospheric music were used to enhance immersion in Darkness Within."
+        }
+      ]
+    },
+    {
+      "slug": "last-dance",
+      "title": "Last Dance",
+      "genre": "Point-and-Click Detective Puzzle",
+      "engine": "Unity",
+      "accent": "#d63aa6",
+      "accent2": "#6b3fb8",
+      "coverLine": "Three clubs. One killer per night.",
+      "premise": "A detective-style point-and-click puzzle game in Unity. The player investigates a murder mystery across three unique club levels, each with its own setting, dance animations, scenario, and killer-catching outcome.",
+      "media": {
+        "poster": "/art/last-dance.svg",
+        "status": "final",
+        "note": "Gameplay from Last Dance (YouTube). Solutions stay off this page.",
+        "youtube": "zNGxGxRM0Ws"
+      },
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://youtu.be/zNGxGxRM0Ws"
+        }
+      ],
+      "panels": [
+        {
+          "id": "case-file",
+          "kind": "dominant",
+          "title": "The case file",
+          "caption": "Detective puzzle · point-and-click · Unity",
+          "body": "Last Dance is a detective-style point-and-click puzzle game built in Unity in which the player investigates a murder mystery."
+        },
+        {
+          "id": "three-clubs",
+          "kind": "support",
+          "title": "Three clubs",
+          "caption": "Three levels · distinct settings, dance animations and scenarios",
+          "body": "The investigation spans three unique club levels. Each club has its own setting, dance animations, and scenario."
+        },
+        {
+          "id": "clues",
+          "kind": "support",
+          "title": "Point, click, collect",
+          "caption": "Interactive clue system",
+          "body": "Last Dance uses point-and-click mechanics with an interactive clue system: the player clicks on parts of the scene to investigate them and gather clues."
+        },
+        {
+          "id": "outcomes",
+          "kind": "detail",
+          "title": "Catching the killer",
+          "caption": "Varied outcomes per level",
+          "body": "Each level has its own killer-catching outcome, so the conclusion differs from club to club. The specific solutions are kept off this page."
+        }
+      ]
+    },
+    {
+      "slug": "maze-pathfinding",
+      "title": "2D Maze Pathfinding",
+      "genre": "2D Maze Game",
+      "engine": "Unity and C#",
+      "accent": "#2f6db5",
+      "accent2": "#d94c3d",
+      "coverLine": "Find your way. Then see the shortest one.",
+      "premise": "A 2D maze game built in Unity using C#. The player first navigates a predefined maze. After the player completes it, the game runs Dijkstra's algorithm to compute and display the shortest path to the exit.",
+      "media": {
+        "clip": "/media/dev/maze-pathfinding-dev.mp4",
+        "poster": "/art/maze-pathfinding.svg",
+        "status": "development",
+        "note": "Development media. Footage of the original Unity project has not been supplied yet."
+      },
+      "links": [],
+      "panels": [
+        {
+          "id": "navigate",
+          "kind": "dominant",
+          "title": "Step 1 · You find a way out",
+          "caption": "Player-controlled navigation in a predefined maze",
+          "body": "In the 2D maze game the player controls navigation through a predefined maze. The game was built in Unity using C#."
+        },
+        {
+          "id": "dijkstra",
+          "kind": "support",
+          "title": "Step 2 · The game shows the shortest way",
+          "caption": "Dijkstra's algorithm · after completion",
+          "body": "After the player completes the maze, the game uses Dijkstra's algorithm to compute and display the shortest path to the exit. The shortest path is shown only after the player has finished, so it works as a comparison with the route the player took."
+        },
+        {
+          "id": "demo",
+          "kind": "detail",
+          "title": "Try it here",
+          "caption": "Interactive explanation · not footage of the Unity project",
+          "body": "This page includes a small web demonstration on a sample maze that reveals a Dijkstra shortest path. It is an interactive explanation written for the portfolio, separate from the original Unity project."
+        }
+      ]
+    }
+  ],
+  "journey": {
+    "url": "/journey",
+    "title": "The Journey So Far",
+    "education": [
+      {
+        "id": "ned",
+        "title": "BS Computer Science",
+        "org": "NED University, Karachi",
+        "period": "2023 – 2027",
+        "detail": "CGPA: 3.39",
+        "coursework": [
+          "Fundamentals of Game Development",
+          "Game Programming",
+          "Game Design and Development",
+          "Design of AR and VR Applications"
+        ]
+      },
+      {
+        "id": "a-levels",
+        "title": "A Levels",
+        "org": "Completed",
+        "period": "",
+        "detail": "Equivalency: 77%"
+      },
+      {
+        "id": "o-levels",
+        "title": "O Levels",
+        "org": "Completed",
+        "period": "",
+        "detail": "Equivalency: 80%"
+      }
+    ],
+    "achievements": [
+      {
+        "id": "cega",
+        "type": "award",
+        "title": "CEGA Game Jam — Runner-Up",
+        "place": "Karachi",
+        "body": "Zohair finished as Runner-Up at the CEGA Game Jam in Karachi. The résumé does not name the game made at this jam."
+      },
+      {
+        "id": "indus",
+        "type": "participation",
+        "title": "Indus AI Game Jam — Participant",
+        "place": "Islamabad",
+        "body": "Zohair participated in the Indus AI Game Jam in Islamabad, designing and building a playable game prototype under time constraints as part of a collaborative team. The résumé does not name the game made at this jam."
+      }
+    ],
+    "experience": {
+      "id": "practice",
+      "title": "Practical experience",
+      "body": "Zohair's practical experience comes from the four game projects on this site and from two game jams. No employment or internship is listed in the portfolio yet."
+    }
+  }
+}

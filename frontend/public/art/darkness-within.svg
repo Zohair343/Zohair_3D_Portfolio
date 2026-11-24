@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="t d">
+<title id="t">Darkness Within — the corridor</title>
+<desc id="d">Inked illustration of a dark green corridor seen in first person. A torch beam lights a wall riddle; two pale eyes watch from the doorway at the end.</desc>
+<defs>
+ <pattern id="ht" width="9" height="9" patternUnits="userSpaceOnUse"><circle cx="4.5" cy="4.5" r="2.3" fill="#0e120e" opacity=".7"/></pattern>
+ <radialGradient id="beam" cx=".38" cy=".45" r=".42"><stop offset="0" stop-color="#cfe0c4" stop-opacity=".85"/><stop offset="1" stop-color="#cfe0c4" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="1600" height="900" fill="#2b332b"/>
+<g stroke="#0b0d0b" stroke-width="6" stroke-linejoin="round">
+ <path d="M0 0 L620 300 L620 640 L0 900 Z" fill="#3b4a3a"/>
+ <path d="M1600 0 L980 300 L980 640 L1600 900 Z" fill="#323e31"/>
+ <path d="M0 0 H1600 L980 300 H620 Z" fill="#232a23"/>
+ <path d="M0 900 L620 640 H980 L1600 900 Z" fill="#283028"/>
+ <rect x="620" y="300" width="360" height="340" fill="#101410"/>
+ <rect x="730" y="370" width="140" height="270" fill="#050605"/>
+</g>
+<rect width="1600" height="900" fill="url(#ht)" opacity=".55"/>
+<ellipse cx="610" cy="420" rx="430" ry="300" fill="url(#beam)"/>
+<g stroke="#0b0d0b" stroke-width="5" fill="none" stroke-linecap="round">
+ <path d="M330 300 q40 -30 80 0 t80 0 M340 370 h170 M350 420 q60 30 120 0 M360 480 l30 -30 l30 30 l30 -30"/>
+ <path d="M0 0 L620 300 M1600 0 L980 300 M0 900 L620 640 M1600 900 L980 640" stroke-width="4" opacity=".7"/>
+</g>
+<g fill="#d8f0c8"><ellipse cx="780" cy="455" rx="12" ry="6"/><ellipse cx="822" cy="455" rx="12" ry="6"/></g>
+<g stroke="#0b0d0b" stroke-width="6"><rect x="1210" y="700" width="230" height="140" rx="6" fill="#5a4a32"/><path d="M1210 740 h230" /></g>
+<rect x="1240" y="760" width="60" height="50" fill="#7fa37a" stroke="#0b0d0b" stroke-width="4"/>
+</svg>

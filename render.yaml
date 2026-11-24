@@ -1,0 +1,23 @@
+# Render blueprint (https://render.com/docs/blueprint-spec). One Docker web service.
+# Secrets are set in the Render dashboard, never committed.
+services:
+  - type: web
+    name: playable-pages
+    runtime: docker
+    plan: starter
+    healthCheckPath: /api/health
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: CONTACT_TO_EMAIL
+        value: zohairishrat@gmail.com
+      - key: EMAIL_PROVIDER
+        value: resend
+      - key: MAIL_FROM
+        sync: false
+      - key: RESEND_API_KEY
+        sync: false
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: PUBLIC_SITE_URL
+        sync: false

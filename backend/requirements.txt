@@ -1,0 +1,6 @@
+# Running the backend on your own machine: everything Vercel uses, plus a production server
+# and the optional Claude provider.
+-r ../requirements.txt
+gunicorn==23.0.0
+anthropic==2.13.0
+lameenc==1.9.0          # MP3 encoding for generate_narration.py (local only)

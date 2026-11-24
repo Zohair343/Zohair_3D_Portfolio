@@ -1,0 +1,102 @@
+/* Styles for shared components used inside book pages. */
+/* ============ Signature gameplay panel ============ */
+@property --dot { syntax: '<length>'; inherits: false; initial-value: 0px; }
+.gameplay { margin: 0; }
+.gameplay-stage { position: relative; aspect-ratio: 16 / 9; background: #000; overflow: hidden; }
+.gameplay-video, .gameplay-art, .gameplay-art img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.gameplay-video { background: #000; }
+.gameplay-art { z-index: 2; --dot: 0px;
+  -webkit-mask-image: radial-gradient(circle, transparent var(--dot), #000 calc(var(--dot) + 0.5px));
+  mask-image: radial-gradient(circle, transparent var(--dot), #000 calc(var(--dot) + 0.5px));
+  -webkit-mask-size: 18px 18px; mask-size: 18px 18px; }
+.gameplay.revealed .gameplay-art { animation: halftone-dissolve 900ms ease-in forwards; pointer-events: none; }
+.gameplay.revealed.no-motion .gameplay-art { animation: none; opacity: 0; }
+@keyframes halftone-dissolve { 0% { --dot: 0px; opacity: 1; } 80% { --dot: 13px; opacity: 1; } 100% { --dot: 13px; opacity: 0; } }
+.gameplay-cta { position: absolute; z-index: 4; left: 50%; bottom: 18px; transform: translateX(-50%); }
+.gameplay .media-flag { position: absolute; z-index: 5; right: 10px; top: 10px; }
+.gameplay.revealed .media-flag { top: 10px; }
+.gameplay-cap { padding: 8px 14px; border-top: var(--border); background: var(--paper); }
+.art-caption { position: absolute; left: 14px; top: 14px; max-width: 62%; z-index: 3; font-size: clamp(.85rem, 1.5vw, 1.02rem); }
+.inset { position: absolute; z-index: 3; left: 14px; bottom: 14px; width: min(34%, 220px); padding: 6px 8px 4px; box-shadow: var(--shadow-sm); }
+.inset .hits { width: 100%; height: auto; }
+.inset-label { display: block; text-align: center; font: 800 .85rem var(--display); text-transform: uppercase; letter-spacing: .08em; }
+@media (max-width: 600px) {
+  .inset { display: none; }
+  .art-caption { max-width: 86%; top: 46px; font-size: .8rem; }
+  .gameplay-cta .btn { font-size: 1rem; padding: 8px 12px; }
+  .gameplay .media-flag { font-size: .72rem; }
+}
+
+/* ============ Journey ============ */
+.org { font-weight: 700; font-size: 1.1rem; }
+.course-list { columns: 2; padding-left: 20px; }
+@media (max-width: 600px) { .course-list { columns: 1; } }
+.earlier summary { cursor: pointer; font-weight: 700; margin-top: 10px; }
+.achievement { position: relative; padding-right: 120px; }
+.achievement.award { background: #fff4d0; box-shadow: 6px 6px 0 #c8902b; }
+.rosette { position: absolute; right: 16px; top: 16px; width: 92px; height: 92px; border-radius: 50%; background: radial-gradient(circle, #f2c14e 55%, #c8902b 56%); border: 3px solid var(--ink); display: grid; place-content: center; text-align: center; font: 900 1rem/1 var(--display); transform: rotate(8deg); }
+.rosette::before, .rosette::after { content: ''; position: absolute; bottom: -26px; width: 22px; height: 34px; background: #c8102e; border: 3px solid var(--ink); z-index: -1; }
+.rosette::before { left: 22px; transform: rotate(14deg); } .rosette::after { right: 22px; transform: rotate(-14deg); }
+.stamp { position: absolute; right: 14px; top: 22px; border: 3px solid var(--ink-soft); color: var(--ink-soft); font: 800 1rem var(--display); text-transform: uppercase; padding: 4px 8px; transform: rotate(-8deg); letter-spacing: .08em; }
+@media (max-width: 480px) { .achievement { padding-right: 20px; padding-top: 116px; } }
+
+/* ============ Ask Zohair ============ */
+.ask-layout { display: grid; grid-template-columns: 280px 1fr; gap: 22px; align-items: start; }
+@media (max-width: 860px) { .ask-layout { grid-template-columns: 1fr; } .ask-side { display: grid; grid-template-columns: 96px 1fr; gap: 12px; align-items: start; } .ask-side .muted { grid-column: 1 / -1; } }
+.ask-portrait { width: 100%; border-radius: 50%; border: var(--border); background: #efe2c8; margin-bottom: 12px; }
+.ask-main { display: flex; flex-direction: column; min-height: 520px; }
+.chat-log { list-style: none; margin: 0; padding: 18px; flex: 1; overflow-y: auto; max-height: 62vh; display: flex; flex-direction: column; gap: 16px; }
+.msg { display: grid; gap: 4px; max-width: 88%; }
+.msg-visitor { align-self: flex-end; justify-items: end; }
+.msg-system { max-width: 100%; align-self: stretch; }
+.speaker { font: 800 .9rem var(--display); text-transform: uppercase; letter-spacing: .08em; }
+.msg .bubble { margin-left: 14px; }
+.msg .bubble p { margin: 0; white-space: pre-wrap; }
+.bubble-visitor { background: var(--caption); margin-right: 14px; margin-left: 0 !important; }
+.bubble-visitor::after { left: auto; right: 30px; background: var(--caption); }
+.thinking { font-style: italic; color: var(--ink-soft); }
+.not-found { margin-bottom: 6px; background: #fbe9e7; }
+.cites { margin-top: 10px; border-top: 2px dashed var(--ink); padding-top: 8px; font-size: .95rem; }
+.cites-label { font: 800 .85rem var(--display); text-transform: uppercase; letter-spacing: .08em; }
+.cites ul { margin: 4px 0 0; padding-left: 18px; }
+.cites a { font-weight: 700; }
+.system-notice { border: 3px solid var(--danger); background: #fbe9e7; padding: 10px 14px; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.small-btn { min-height: 38px; font-size: .95rem; padding: 4px 10px; }
+.starters { display: flex; flex-wrap: wrap; gap: 8px; padding: 0 18px 14px; }
+.starter { font: inherit; font-size: .95rem; font-weight: 600; text-align: left; background: #fffdf7; border: 2px solid var(--ink); padding: 8px 12px; cursor: pointer; box-shadow: 3px 3px 0 var(--ink); color: var(--ink); }
+.starter:hover { background: var(--caption); }
+.chat-form { border-top: var(--border); padding: 14px 18px; display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: start; }
+.chat-form textarea { font: inherit; border: 3px solid var(--ink); padding: 10px; resize: vertical; min-height: 52px; background: #fffdf7; color: var(--ink); }
+.chat-form p { grid-column: 1 / -1; margin: 0; }
+
+/* ============ Contact letter ============ */
+.letter { max-width: 760px; padding: clamp(18px, 4vw, 40px); background: #fffbf1; background-image: repeating-linear-gradient(transparent 0 33px, rgba(47,109,181,.16) 33px 34px); }
+.letter-salutation { font-size: 2.2rem; margin-bottom: 10px; }
+.letter-sign { display: grid; grid-template-columns: 1fr 1fr; gap: 0 18px; }
+.letter-sign .field:first-child { grid-column: 1 / -1; }
+@media (max-width: 600px) { .letter-sign { grid-template-columns: 1fr; } }
+.field { display: grid; gap: 4px; margin-bottom: 16px; }
+.field label { font-weight: 700; }
+.field input, .field textarea { font: inherit; font-size: 1.05rem; border: 3px solid var(--ink); padding: 10px 12px; background: #fff; color: var(--ink); border-radius: 2px; }
+.field.has-error input, .field.has-error textarea { border-color: var(--danger); box-shadow: 3px 3px 0 var(--danger); }
+.hint { font-size: .88rem; color: var(--ink-soft); }
+.field-error { color: var(--danger); font-weight: 700; font-size: .95rem; }
+.hp { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+.letter-status:focus { outline: none; }
+
+.demo-link { margin: 0 0 18px; }
+.balloon-link { display: inline-block; background: #fffdf7; border: 3px solid var(--ink); border-radius: 50% / 46%; padding: 10px 22px; font: 800 1.05rem var(--display); text-transform: uppercase; letter-spacing: .04em; text-decoration: none; box-shadow: 4px 4px 0 var(--accent); }
+.balloon-link:hover { background: var(--caption); }
+
+/* maze demo */
+.maze-demo { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; align-items: start; }
+.maze-demo svg { border: 3px solid var(--ink); background: #f3f1e7; }
+.maze-controls { display: grid; gap: 10px; align-content: start; }
+.maze-path { stroke-dasharray: 2000; stroke-dashoffset: 2000; animation: draw 1.2s ease-out forwards; }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+@media (max-width: 760px) { .maze-demo { grid-template-columns: 1fr; } }
+/* status messages */
+.status { border: 3px solid var(--ink); padding: 10px 14px; margin: 14px 0; background: #fffdf7; }
+.status.warn { border-style: dashed; }
+.status.ok { border-color: var(--ok); background: #e5f3e9; }
+.status.err { border-color: var(--danger); background: #fbe9e7; }

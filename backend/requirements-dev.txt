@@ -1,0 +1,4 @@
+# Tests and the optional keyless local embedding model (EMBED_PROVIDER=local).
+-r requirements.txt
+fastembed==0.9.1
+pytest==9.2.0

@@ -1,0 +1,27 @@
+{
+  "$comment": "What the narrator says on each page (page ids from frontend/src/book/book.config.ts). Facts must match portfolio.json. After editing, run `python generate_narration.py` in backend/ to re-record only the changed pages.",
+  "style": "Warm, friendly and conversational, like a young game developer proudly showing his work to a visitor. Natural pace, not rushed.",
+  "pages": {
+    "cover": "Hi, I'm Muhammad Zohair Shaikh, a game developer from Karachi. I build games in Unreal Engine and Unity. Open the book, and I'll show you how they work.",
+    "contents": "Here's what's inside: a bit about me, my skills, four games, my journey so far, a short film, and a chat where you can ask me anything about my work.",
+    "about": "I'm a final-year Computer Science student at NED University, specializing in game development. I love building the systems underneath play: combat, enemy AI, puzzles and pathfinding.",
+    "skills": "This is my inventory. Some skills have a 'see it' tag. Click one, and the book jumps to the panel where I actually used it.",
+    "projects": "Four games, four covers. Pick one, or turn the page to start with Scorched.",
+    "scorched-1": "Scorched is a first-person action rogue-like set in an ancient Egyptian arena. I built it entirely with Blueprint Visual Scripting in Unreal Engine 5. Land three hits, and you unlock a slow-motion gun.",
+    "scorched-2": "Here's how the combo works. It's built from modular Actor Components. Sphere casts detect each hit, frame by frame, and a streak of three connected hits unlocks the slow-motion gun ability.",
+    "scorched-3": "There are two enemy types, melee and ranged. Each has its own behaviour logic, but they share the same locomotion system and chase you using NavMesh. The HUD listens for events through multicast delegates, so it never has to poll.",
+    "scorched-4": "I wrote a custom toon shader in the Material Editor to give Scorched its look, and the whole game runs on Blueprints.",
+    "darkness-within-1": "Darkness Within is a first-person survival horror game I made in Unity. You solve riddles and manage your inventory, while something hunts you in the dark. Make a choice, and see what happens.",
+    "darkness-within-2": "The enemies are AI-driven and use Unity's NavMesh to find their way to you. There's shooting too, and the animations, sound effects and music are there to keep the tension high.",
+    "last-dance-1": "Last Dance is a detective point-and-click game in Unity. You investigate a murder mystery across three nightclubs.",
+    "last-dance-2": "Each club has its own setting, dance animations and scenario. You click around to collect clues, and every level ends with its own way of catching the killer. I'll keep the solutions sealed.",
+    "maze-pathfinding-1": "In this 2D maze game, made in Unity with C#, you first find your own way out. Once you've finished, the game uses Dijkstra's algorithm to show you the shortest path.",
+    "maze-pathfinding-2": "Try it yourself. Press reveal, and watch Dijkstra search the maze for the shortest route to the exit.",
+    "journey-1": "I'm studying for a BS in Computer Science at NED University in Karachi, with coursework in game programming, game design, and AR and VR.",
+    "journey-2": "I finished as runner-up at the CEGA Game Jam in Karachi, and I took part in the Indus AI Game Jam in Islamabad, building a playable prototype with a team under time pressure.",
+    "film": "Here's a short film that walks through the whole book in under a minute.",
+    "ask": "Ask me about any of my games. My AI guide answers only from this portfolio, and every answer links to the page it came from.",
+    "contact": "Want to talk about a project, a game jam, or an internship? Write me a letter, and it comes straight to my inbox.",
+    "credits": "Thanks for reading! The character model is credited here, along with a quick look at how this book works."
+  }
+}

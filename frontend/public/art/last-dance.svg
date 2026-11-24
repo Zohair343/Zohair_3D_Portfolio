@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="t d">
+<title id="t">Last Dance — the evidence board</title>
+<desc id="d">Inked illustration of a detective's evidence board under magenta and violet nightclub light: three pinned club snapshots of dancers joined by red string, a question-marked suspect card and a disco ball.</desc>
+<defs>
+ <pattern id="ht" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="5" cy="5" r="2" fill="#1a1612" opacity=".5"/></pattern>
+ <radialGradient id="glow" cx=".8" cy=".1" r=".8"><stop offset="0" stop-color="#d63aa6" stop-opacity=".9"/><stop offset="1" stop-color="#2a1640" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="1600" height="900" fill="#2a1640"/>
+<rect width="1600" height="900" fill="url(#glow)"/>
+<rect x="90" y="80" width="1420" height="740" fill="#8a5a3a" stroke="#1a1612" stroke-width="8"/>
+<rect x="90" y="80" width="1420" height="740" fill="url(#ht)" opacity=".5"/>
+<g stroke="#1a1612" stroke-width="6">
+ <g transform="rotate(-4 330 300)"><rect x="200" y="160" width="280" height="300" fill="#fbf4e6"/><rect x="225" y="185" width="230" height="200" fill="#6b3fb8"/>
+  <path d="M290 385 l20 -110 l30 0 l20 110 M300 300 l-40 -40 M350 300 l40 -50" stroke="#1a1612" fill="none" stroke-width="8"/><circle cx="325" cy="250" r="22" fill="#1a1612"/></g>
+ <g transform="rotate(3 800 260)"><rect x="660" y="130" width="280" height="300" fill="#fbf4e6"/><rect x="685" y="155" width="230" height="200" fill="#d63aa6"/>
+  <path d="M770 355 l25 -100 l25 100 M795 290 l-50 10 M795 290 l50 -30" stroke="#1a1612" fill="none" stroke-width="8"/><circle cx="795" cy="225" r="22" fill="#1a1612"/></g>
+ <g transform="rotate(-2 1250 320)"><rect x="1110" y="180" width="280" height="300" fill="#fbf4e6"/><rect x="1135" y="205" width="230" height="200" fill="#3a2a7a"/>
+  <path d="M1230 405 l10 -100 l30 0 l15 100 M1240 330 l-40 20 M1270 330 l40 -40" stroke="#1a1612" fill="none" stroke-width="8"/><circle cx="1252" cy="275" r="22" fill="#1a1612"/></g>
+ <g transform="rotate(5 800 640)"><rect x="660" y="540" width="280" height="200" fill="#fff5a8"/></g>
+</g>
+<g font-family="Arial Narrow, Arial, sans-serif" font-weight="900" fill="#1a1612">
+ <text x="340" y="440" font-size="34" text-anchor="middle" transform="rotate(-4 330 300)">CLUB I</text>
+ <text x="800" y="410" font-size="34" text-anchor="middle" transform="rotate(3 800 260)">CLUB II</text>
+ <text x="1250" y="460" font-size="34" text-anchor="middle" transform="rotate(-2 1250 320)">CLUB III</text>
+ <text x="800" y="680" font-size="150" text-anchor="middle" transform="rotate(5 800 640)">?</text>
+</g>
+<g stroke="#c8102e" stroke-width="6" fill="none"><path d="M340 170 Q560 300 800 140 Q1030 280 1250 190 M340 170 Q520 520 800 560 M1250 190 Q1100 520 800 560"/></g>
+<g fill="#c8102e" stroke="#1a1612" stroke-width="4"><circle cx="340" cy="170" r="14"/><circle cx="800" cy="140" r="14"/><circle cx="1250" cy="190" r="14"/><circle cx="800" cy="560" r="14"/></g>
+<g stroke="#1a1612" stroke-width="5"><line x1="1450" y1="0" x2="1450" y2="60"/><circle cx="1450" cy="110" r="50" fill="#d9d4e8"/><path d="M1400 110 h100 M1450 60 v100 M1410 85 h80 M1410 135 h80" stroke-width="3"/></g>
+</svg>

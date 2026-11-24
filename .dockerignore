@@ -1,0 +1,11 @@
+**/node_modules
+**/.venv
+**/__pycache__
+backend/.env
+backend/.model-cache
+backend/index
+frontend/dist
+assets
+docs
+film
+.git

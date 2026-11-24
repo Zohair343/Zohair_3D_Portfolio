@@ -1,0 +1,77 @@
+[
+ {
+  "type": "Factual",
+  "q": "How does the three-hit combo work in Scorched?",
+  "expect": [
+   "scorched.slow-motion",
+   "scorched.combo"
+  ],
+  "supported": true,
+  "url": [
+   "/projects/scorched#slow-motion",
+   "/projects/scorched#combo"
+  ]
+ },
+ {
+  "type": "Factual",
+  "q": "Which game jam did Zohair finish as runner-up in?",
+  "expect": [
+   "journey.cega"
+  ],
+  "supported": true,
+  "url": [
+   "/journey#cega"
+  ]
+ },
+ {
+  "type": "Factual",
+  "q": "When does the maze game show the shortest path?",
+  "expect": [
+   "maze-pathfinding.dijkstra"
+  ],
+  "supported": true,
+  "url": [
+   "/projects/maze-pathfinding#dijkstra"
+  ]
+ },
+ {
+  "type": "Cross-project",
+  "q": "How did Zohair use NavMesh in his games?",
+  "expect": [
+   "scorched.enemies",
+   "darkness-within.threat"
+  ],
+  "supported": true,
+  "url": [
+   "/projects/scorched#enemies",
+   "/projects/darkness-within#threat"
+  ]
+ },
+ {
+  "type": "Cross-project",
+  "q": "Compare the enemy AI in Scorched and Darkness Within.",
+  "expect": [
+   "scorched.enemies",
+   "darkness-within.threat"
+  ],
+  "supported": true,
+  "url": [
+   "/projects/scorched#enemies",
+   "/projects/darkness-within#threat"
+  ]
+ },
+ {
+  "type": "Unsupported",
+  "q": "How many copies did Scorched sell?",
+  "expect": [],
+  "supported": false,
+  "url": []
+ },
+ {
+  "type": "Unsupported",
+  "q": "What game did Zohair make at the CEGA Game Jam?",
+  "expect": [],
+  "supported": false,
+  "url": []
+ }
+]
