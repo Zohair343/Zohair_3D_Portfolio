@@ -1,15 +1,34 @@
 {
-  "src": "/media/film/portfolio-animatic.mp4",
-  "captions": "/media/film/portfolio-animatic.en.vtt",
-  "statusTitle": "Animatic, not the final film.",
-  "statusNote": "This timed animatic follows the storyboard so the panel, captions and transcript can be tested. The After Effects film will replace it at the same path once rendered.",
+  "src": "/media/film/playable-pages-trailer.mp4",
+  "captions": "/media/film/playable-pages-trailer.en.vtt",
+  "poster": "/media/film/trailer-poster.jpg",
+  "statusTitle": "",
+  "statusNote": "",
+  "credits": "Music: “Bring It To Me” by Alex Kizenkov (Pixabay). Sound effects: CC0 (Kenney, Freesound).",
   "lines": [
-    { "t": "0:00", "text": "An ink line draws the first panel. Muhammad Zohair Shaikh — Game Developer." },
-    { "t": "0:05", "text": "Scorched. An ancient Egyptian arena. Land three hits to unlock the slow-motion gun ability." },
-    { "t": "0:15", "text": "Darkness Within. Riddles, inventory, and an enemy that follows you on the NavMesh." },
-    { "t": "0:20", "text": "Last Dance. A murder mystery across three clubs." },
-    { "t": "0:25", "text": "Finish the maze, then Dijkstra's algorithm shows the shortest path. Unity · Unreal Engine · gameplay programming." },
-    { "t": "0:32", "text": "Computer Science at NED University, Karachi. Runner-up at the CEGA Game Jam." },
-    { "t": "0:39", "text": "Explore the projects. Ask me how they work." }
+    {
+      "t": "0:00",
+      "text": "A comic panel slams in: Muhammad Zohair Shaikh, Game Developer."
+    },
+    {
+      "t": "0:04",
+      "text": "The camera pushes in on the cover of this book and its character: “Welcome to my world!”"
+    },
+    {
+      "t": "0:08",
+      "text": "The toolkit, on the beat: Unity, Unreal Engine 5, gameplay programming, 3D environments."
+    },
+    {
+      "t": "0:13",
+      "text": "The Projects page turns, then four panels: Scorched (Unreal Engine 5), Darkness Within (Unity), Last Dance (Unity) and 2D Maze Pathfinding (Unity and C#)."
+    },
+    {
+      "t": "0:24",
+      "text": "A splash page brings the projects and the cover together, with the address zohair-3-d-portfolio.vercel.app."
+    },
+    {
+      "t": "0:27",
+      "text": "Enter my world."
+    }
   ]
 }

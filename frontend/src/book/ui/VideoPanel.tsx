@@ -16,6 +16,8 @@ interface Props {
   status: 'final' | 'development';
   note?: string;
   artOverlay?: ReactNode;
+  /** Play button text for a local clip (default "Play gameplay"). */
+  playLabel?: string;
 }
 
 /**
@@ -27,7 +29,7 @@ export default function VideoPanel(props: Props) {
   const key = live ? 'live' : 'idle';
   return props.youtube ? <YouTubePanel key={key} {...props} youtube={props.youtube} /> : (
     <GameplayPanel key={key} id={props.id} title={props.title} poster={props.poster} posterAlt={props.posterAlt} clip={props.clip}
-      status={props.status} note={props.note} artOverlay={props.artOverlay} captions={props.captions} />
+      status={props.status} note={props.note} artOverlay={props.artOverlay} captions={props.captions} playLabel={props.playLabel} />
   );
 }
 

@@ -88,7 +88,7 @@ The tests include a check that every chunk anchor exists in the frontend.
 |---|---|---|
 | Cover illustrations | `frontend/public/art/*.svg` | Hand-authored; the maze one is generated from the real algorithm: `cd frontend && npx vite-node scripts/gen-maze-art.ts` |
 | Gameplay clips | `frontend/public/media/dev/*-dev.{webm,mp4}` | **Development media, labelled on-frame.** `tools/make-dev-media.sh` |
-| Film | `frontend/public/media/film/portfolio-animatic.*` + `.en.vtt` | Animatic: `film/animatic/build.sh`. Replace with the After Effects render at the same path |
+| Film (30 s trailer) | `frontend/public/media/film/playable-pages-trailer.{mp4,webm}` + `.en.vtt`, poster `trailer-poster.jpg` | Source in `film/trailer/` (see its README) |
 
 **Adding real gameplay:** put the clip at `frontend/public/media/<slug>.mp4`, run `ffmpeg -i clip.mp4 -c:v libvpx-vp9 -crf 34 -b:v 0 -an clip.webm` for the WebM twin, export its **first frame** (`ffmpeg -i clip.mp4 -frames:v 1 first.png`), redraw or ink it as the poster so the dissolve lines up, then update that project's `media` (`clip`, `poster`, `status: "final"`, `note`). The "Development media" flag disappears automatically.
 

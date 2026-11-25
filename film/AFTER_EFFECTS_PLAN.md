@@ -1,6 +1,6 @@
 # Portfolio film: After Effects composition plan
 
-**Status:** After Effects was not available in the build environment. The native `.aep` and final render are **pending**. A timed animatic (`frontend/public/media/film/portfolio-animatic.mp4`, 45.0 s, built by `film/animatic/build.sh`) follows this plan so the site's film panel, captions and transcript work now. Export the final render to the same path (H.264 MP4, plus a WebM twin) and update `content/film-transcript.json` (`statusTitle`/`statusNote`).
+**Status:** The 30-second trailer is rendered and on the Film page (`frontend/public/media/film/playable-pages-trailer.mp4`); its source is `film/trailer/`. It was built as a code-driven motion-graphics timeline, not in After Effects, so the native `.aep` is still **pending**.
 
 ## Project settings
 - 1920×1080, 30 fps, 45:00 duration, sRGB; master comp `00_MASTER`.

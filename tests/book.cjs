@@ -116,6 +116,14 @@ const waitPath = async (p, want, ms = 30000) => { const t = Date.now(); while (D
   await p.getByRole('button', { name: /Stop narrating/ }).click();
   ok(await p.getByRole('button', { name: /Narrate/ }).getAttribute('aria-pressed') === 'false' && await p.locator('.captions').count() === 0, 'narration stops and captions disappear');
 
+  console.log('film');
+  await p.goto(base + '/film', { waitUntil: 'load' }); await waitLive(p, '#film-video');
+  await p.locator('#film-video').getByRole('button', { name: /Play trailer/ }).click();
+  await p.waitForSelector('#film-video video', { timeout: 10000 });
+  ok(await p.$eval('#film-video video source[type="video/mp4"]', (s) => s.getAttribute('src')) === '/media/film/playable-pages-trailer.mp4', 'the Film page plays the trailer MP4');
+  ok(await p.locator('#film-video video track[kind="captions"]').count() === 1, 'the trailer has captions');
+  await p.goto(base + '/about', { waitUntil: 'load' }); await waitLive(p, '.face-about');
+
   console.log('music & résumé');
   const musicBtn = p.locator('.balloon.music');
   const before = await musicBtn.getAttribute('aria-pressed');

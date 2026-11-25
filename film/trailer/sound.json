@@ -1,0 +1,321 @@
+{
+ "mode": "music-sfx",
+ "duration": 30,
+ "target": {
+  "lufs": -16,
+  "truePeak": -1.5
+ },
+ "music": {
+  "file": "sound/music-full.mp3",
+  "title": "Bring It To Me (hip-hop funk beat)",
+  "artist": "Alex Kizenkov",
+  "source": "Supplied by the student (file name indicates Pixabay)",
+  "license": "Pixabay Content License (to confirm by the student)",
+  "credit": "Music: Alex Kizenkov",
+  "gain": -13,
+  "offset": 1.0,
+  "start": 0,
+  "fadeIn": 0.2,
+  "fadeOut": 2.2
+ },
+ "ambience": [],
+ "cues": [
+  {
+   "t": 0.05,
+   "type": "movement",
+   "sound": "sfx:riser/fs-685256-riser-sound-effect-short-wav.ogg",
+   "gain": -14,
+   "desc": "build into the title",
+   "layer": "style"
+  },
+  {
+   "t": 0.62,
+   "type": "impact",
+   "sound": "sfx:impact/kenney-impact-impactpunch-heavy-000.ogg",
+   "gain": -6,
+   "desc": "MUHAMMAD",
+   "layer": "style"
+  },
+  {
+   "t": 0.86,
+   "type": "impact",
+   "sound": "sfx:impact/kenney-impact-impactpunch-heavy-001.ogg",
+   "gain": -6,
+   "desc": "ZOHAIR",
+   "layer": "style"
+  },
+  {
+   "t": 1.1,
+   "type": "impact",
+   "sound": "sfx:impact/fs-222517-dramatic-hit.ogg",
+   "gain": -7,
+   "desc": "SHAIKH",
+   "layer": "style"
+  },
+  {
+   "t": 1.55,
+   "type": "movement",
+   "sound": "sfx:kit/whoosh.ogg",
+   "gain": -13,
+   "desc": "GAME DEVELOPER slides in",
+   "layer": "style",
+   "dur": 0.4
+  },
+  {
+   "t": 3.55,
+   "type": "movement",
+   "sound": "sfx:transition/fs-702773-swipe-wav.ogg",
+   "gain": -10,
+   "desc": "ink wipe",
+   "layer": "style",
+   "dur": 0.5
+  },
+  {
+   "t": 4.25,
+   "type": "appear",
+   "sound": "sfx:kit/pop.ogg",
+   "gain": -12,
+   "desc": "Meet the developer",
+   "layer": "style"
+  },
+  {
+   "t": 5.0,
+   "type": "appear",
+   "sound": "sfx:pop/fs-824189-pop-in-sfx.ogg",
+   "gain": -8,
+   "desc": "speech bubble",
+   "layer": "content"
+  },
+  {
+   "t": 7.55,
+   "type": "movement",
+   "sound": "sfx:riser/kenney-digital-phaserup2.ogg",
+   "gain": -16,
+   "desc": "push-in into the drop",
+   "layer": "style"
+  },
+  {
+   "t": 8.0,
+   "type": "impact",
+   "sound": "sfx:impact/fs-177242-cinematic-impact.ogg",
+   "gain": -6,
+   "desc": "drop + UNITY",
+   "layer": "style"
+  },
+  {
+   "t": 9.138,
+   "type": "impact",
+   "sound": "sfx:impact/kenney-impact-impactpunch-heavy-000.ogg",
+   "gain": -9,
+   "desc": "skill keyword",
+   "layer": "style"
+  },
+  {
+   "t": 10.276,
+   "type": "impact",
+   "sound": "sfx:impact/kenney-impact-impactpunch-heavy-001.ogg",
+   "gain": -9,
+   "desc": "skill keyword",
+   "layer": "style"
+  },
+  {
+   "t": 11.413,
+   "type": "impact",
+   "sound": "sfx:impact/kenney-impact-impactpunch-heavy-000.ogg",
+   "gain": -9,
+   "desc": "skill keyword",
+   "layer": "style"
+  },
+  {
+   "t": 12.55,
+   "type": "movement",
+   "sound": "sfx:transition/kenney-interface-scroll-002.ogg",
+   "gain": -8,
+   "desc": "page turn",
+   "layer": "style"
+  },
+  {
+   "t": 13.12,
+   "type": "impact",
+   "sound": "sfx:impact/kenney-impact-impactpunch-heavy-000.ogg",
+   "gain": -8,
+   "desc": "THE PROJECTS",
+   "layer": "style"
+  },
+  {
+   "t": 13.7,
+   "type": "movement",
+   "sound": "sfx:transition/fs-786514-swoosh-v2.ogg",
+   "gain": -10,
+   "desc": "dive into the page",
+   "layer": "style",
+   "dur": 0.4
+  },
+  {
+   "t": 14.25,
+   "type": "impact",
+   "sound": "sfx:impact/fs-222517-dramatic-hit.ogg",
+   "gain": -8,
+   "desc": "panel lands",
+   "layer": "style"
+  },
+  {
+   "t": 14.9,
+   "type": "appear",
+   "sound": "sfx:kit/pop.ogg",
+   "gain": -12,
+   "desc": "sound-effect lettering",
+   "layer": "style"
+  },
+  {
+   "t": 16.2,
+   "type": "movement",
+   "sound": "sfx:transition/fs-683096-woosh.ogg",
+   "gain": -11,
+   "desc": "whip to next project",
+   "layer": "style",
+   "dur": 0.3
+  },
+  {
+   "t": 16.65,
+   "type": "impact",
+   "sound": "sfx:impact/kenney-impact-impactsoft-heavy-000.ogg",
+   "gain": -8,
+   "desc": "panel lands",
+   "layer": "style"
+  },
+  {
+   "t": 17.3,
+   "type": "appear",
+   "sound": "sfx:kit/pop.ogg",
+   "gain": -12,
+   "desc": "sound-effect lettering",
+   "layer": "style"
+  },
+  {
+   "t": 18.6,
+   "type": "movement",
+   "sound": "sfx:transition/fs-683096-woosh.ogg",
+   "gain": -11,
+   "desc": "whip to next project",
+   "layer": "style",
+   "dur": 0.3
+  },
+  {
+   "t": 19.05,
+   "type": "impact",
+   "sound": "sfx:impact/fs-222517-dramatic-hit.ogg",
+   "gain": -8,
+   "desc": "panel lands",
+   "layer": "style"
+  },
+  {
+   "t": 19.7,
+   "type": "appear",
+   "sound": "sfx:kit/pop.ogg",
+   "gain": -12,
+   "desc": "sound-effect lettering",
+   "layer": "style"
+  },
+  {
+   "t": 21.0,
+   "type": "movement",
+   "sound": "sfx:transition/fs-683096-woosh.ogg",
+   "gain": -11,
+   "desc": "whip to next project",
+   "layer": "style",
+   "dur": 0.3
+  },
+  {
+   "t": 21.45,
+   "type": "impact",
+   "sound": "sfx:impact/kenney-impact-impactsoft-heavy-000.ogg",
+   "gain": -8,
+   "desc": "panel lands",
+   "layer": "style"
+  },
+  {
+   "t": 22.1,
+   "type": "appear",
+   "sound": "sfx:kit/pop.ogg",
+   "gain": -12,
+   "desc": "sound-effect lettering",
+   "layer": "style"
+  },
+  {
+   "t": 23.7,
+   "type": "movement",
+   "sound": "sfx:transition/fs-702773-swipe-wav.ogg",
+   "gain": -10,
+   "desc": "ink wipe to splash",
+   "layer": "style",
+   "dur": 0.5
+  },
+  {
+   "t": 24.05,
+   "type": "appear",
+   "sound": "sfx:pop/kenney-interface-drop-001.ogg",
+   "gain": -11,
+   "desc": "panel lands",
+   "layer": "style"
+  },
+  {
+   "t": 24.2,
+   "type": "appear",
+   "sound": "sfx:pop/kenney-interface-drop-002.ogg",
+   "gain": -11,
+   "desc": "panel lands",
+   "layer": "style"
+  },
+  {
+   "t": 24.35,
+   "type": "appear",
+   "sound": "sfx:pop/kenney-interface-drop-003.ogg",
+   "gain": -11,
+   "desc": "panel lands",
+   "layer": "style"
+  },
+  {
+   "t": 24.5,
+   "type": "appear",
+   "sound": "sfx:pop/kenney-interface-drop-001.ogg",
+   "gain": -11,
+   "desc": "panel lands",
+   "layer": "style"
+  },
+  {
+   "t": 24.55,
+   "type": "movement",
+   "sound": "sfx:kit/whoosh.ogg",
+   "gain": -12,
+   "desc": "cover rises",
+   "layer": "style",
+   "dur": 0.4
+  },
+  {
+   "t": 25.6,
+   "type": "appear",
+   "sound": "sfx:kit/pop.ogg",
+   "gain": -13,
+   "desc": "URL",
+   "layer": "content"
+  },
+  {
+   "t": 24.74,
+   "type": "movement",
+   "sound": "sfx:riser/fs-685256-riser-sound-effect-short-wav.ogg",
+   "gain": -14,
+   "desc": "build to the title",
+   "layer": "style"
+  },
+  {
+   "t": 27.2,
+   "type": "impact",
+   "sound": "sfx:impact/fs-347561-micheal-bay-hit.ogg",
+   "gain": -5,
+   "desc": "ENTER MY WORLD",
+   "layer": "style"
+  }
+ ],
+ "voice": []
+}
