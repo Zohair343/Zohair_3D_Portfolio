@@ -1,14 +1,15 @@
 # Only the site build, api/, backend code, the index and content are needed on Vercel.
+# Folder rules start with / so they match only the top-level folder.
 **/node_modules
 **/.venv
 **/__pycache__
 backend/.env
 backend/.model-cache
 backend/tests
-assets
-docs
-film
-tests
-tools
+/assets
+/docs
+/film
+/tests
+/tools
 *.zip
 *.tar.gz
